@@ -230,6 +230,7 @@ pre {
 }
 .the-header .nav-global {
   text-transform: uppercase;
+  border-bottom: 1px dotted #7851a9;
 }
 .the-header .nav-global .forkme {
   position: relative;
@@ -830,7 +831,7 @@ pre {
   .unit-article .unit-head-inner,
   .unit-article .entry-content,
   .unit-article .misc-content {
-    width: 43.125em;
+    width: 54.375em;
   }
   .unit-article .unit-foot-inner {
     width: 88.125em;
@@ -843,13 +844,13 @@ pre {
     width: 9.375em;
   }
   .layout-page .unit-body .unit-body-inner {
-    width: 43.125em;
+    width: 54.375em;
   }
   .layout-page .unit-body .article-list {
-    width: 43.125em;
+    width: 54.375em;
   }
   .layout-page .unit-body .article-list .meta {
-    width: 20.625em;
+    width: 43.125em;
   }
   .the-footer .unit-foot {
     width: 88.125em;
