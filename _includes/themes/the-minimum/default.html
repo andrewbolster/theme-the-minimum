@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>{{ page.title }}</title>
 	<meta name="author" content="{{ site.author.name }}">
-	<link href='{{ ASSET_PATH }}/css/style.css' rel="stylesheet" media="all">
+	<link href='{{ ASSET_PATH }}/css/style.css' rel="stylesheet" type="text/css" media="all">
   <link href="{{ site.author.gplus}}" rel="author">
 	<link href="http://feeds.feedburner.com/{{ site.author.feedbaname }}" rel="alternate" title="{{ page.title }}" type="application/atom+xml">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -34,6 +34,13 @@
 			</div><!-- unit-inner -->
 		</div><!-- unit-head -->
 	</header>
+  <div class="well">
+    <author class="author-well">
+    <img src="{{ site.url }}{{ site.author.profile }}"> </img>
+      <h1>{{ site.author.name }}</h1>
+      <p>{{ site.author.tagline }}</p>
+    </author>
+  </div>
 	<div class="body" role="main">
 		<div class="unit-body">
 			<div class="unit-inner unit-body-inner">
