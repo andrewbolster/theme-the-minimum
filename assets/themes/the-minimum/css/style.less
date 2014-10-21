@@ -68,12 +68,69 @@ pre {
   }
 	.nav-global {
 		text-transform: uppercase;
+    border-bottom: 1px dotted @accent-color;
 		.forkme {
 			position: relative;
 			top: 2px;
 		}
 	}
 } // .the-header
+
+/* FORKONGITHUB
+--------------------------------------------------------------------------------- */
+
+#forkongithub {
+  a{
+    background:@accent-color;
+    color:@main-font-color;
+    text-decoration:none;
+    font-family: @webfont;
+    text-align:center;
+    font-weight:bold;padding:5px 40px;
+    font-size:1rem;
+    line-height:2rem;
+    position:relative;
+    transition:0.5s;
+  }
+  a:hover{
+		color: darken(@main-font-color, 10%);
+    background: lighten(@accent-color, 10%);
+  }
+  a::before,a::after{
+    content:"";
+    width:100%;
+    display:block;
+    position:absolute;
+    top:1px;
+    left:0;
+    height:1px;
+    background:#fff;
+  }
+  a::after{
+    bottom:1px;
+    top:auto;
+  }
+}
+  @media screen and (min-width:800px){
+    #forkongithub { 
+      position:absolute;
+      display:block;
+      top:0;
+      right:0;
+      width:200px;
+      overflow:hidden;
+      height:200px;
+      a{
+        width:200px;
+        position:absolute;
+        top:60px;
+        right:-60px;
+        transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+        box-shadow:4px 4px 10px rgba(120,81,169,0.5);
+      }
+    }
+  }
 
 /* MAIN
 --------------------------------------------------------------------------------- */
@@ -290,6 +347,24 @@ pre {
 	}
 } // .page-post
 
+/* AUTHOR WELL
+----------------------------------------------- */
+.author-well{
+  width:@2cols;
+  float:left;
+  position:fixed;
+  left: 30px;
+  display: none;
+}
+
+@media only screen and (min-width: 1410px) and (min-height: 700px) {
+  .author-well{
+    display:block;
+  }
+}
+
+
+
 /* FOOTER
 ----------------------------------------------- */
 .the-footer {
@@ -299,18 +374,10 @@ pre {
 	color: rgba(250, 250, 250, 0.8);
 	padding-bottom: @line-height / @em;
 	a {
-		&:link {
-			color: @accent-color;
-			border: 0;
-		}
-		&:visited {
-			color: darken(@accent-color, 10%);
-			border: 0;
-		}
-		&:hover {
-			color: lighten(@accent-color, 10%);
-			border: 0;
-		}
+    color: #fafafa;
+    &:link { border-bottom: 1px dotted @accent-color; }
+    &:visited { border-bottom: 1px dotted darken(@accent-color, 10%); }
+    &:hover { border-bottom: 1px dotted lighten(@accent-color, 10%); }
 	}
 	ul {
 		list-style: square;
